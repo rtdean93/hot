@@ -1,0 +1,12 @@
+name = Commerce Authorize.net SIM / DPM Capture
+description = Allows performance of capture on auth_only DPM transactions.
+package = Commerce (contrib)
+core = 7.x
+dependencies[] = commerce_authnet_simdpm
+
+; Information added by drupal.org packaging script on 2012-05-23
+version = "7.x-1.0+8-dev"
+core = "7.x"
+project = "commerce_authnet_simdpm"
+datestamp = "1337731728"
+

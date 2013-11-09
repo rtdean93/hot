@@ -1,0 +1,2305 @@
+@charset "IBM437";
+@import url("http://fonts.googleapis.com/css?family=Ubuntu:300,400,700,300italic,400italic,700italic");
+/*  \file styles.scss
+ *  Main .SCSS file for theme. If you are not comfortable with scss you can edit the .css file
+ *
+ *  © 2013 Louisville Web Group | All Rights Reserved for this theme
+ */
+/*  import Ubuntu font from google.com/webfonts */
+@font-face {
+  font-family: 'BebasRegular';
+  src: url("../fonts/BEBAS___-webfont.eot");
+  src: url("../fonts/BEBAS___-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/BEBAS___-webfont.woff") format("woff"), url("../fonts/BEBAS___-webfont.ttf") format("truetype"), url("../fonts/BEBAS___-webfont.svg#BebasRegular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+/* line 132, ../sass/styles.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+/* line 142, ../sass/styles.scss */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+/* line 145, ../sass/styles.scss */
+body {
+  line-height: 1;
+}
+
+/* line 148, ../sass/styles.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 151, ../sass/styles.scss */
+blockquote, q {
+  quotes: none;
+}
+
+/* line 155, ../sass/styles.scss */
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+/* line 159, ../sass/styles.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/**
+ * /end of reset
+ * begin theme styles
+ */
+/* line 169, ../sass/styles.scss */
+body {
+  background: url("../images/background.png") repeat;
+}
+
+/**
+ * log in
+ */
+/* line 176, ../sass/styles.scss */
+.logged-in #log-in .section {
+  width: 940px;
+  margin: 0 auto;
+}
+/* line 178, ../sass/styles.scss */
+.logged-in #log-in .section #block-ecommify-default-blocks-login-block {
+  float: right;
+  background: url(../images/big-tab.png);
+  width: 220px;
+  height: 40px;
+}
+/* line 184, ../sass/styles.scss */
+.logged-in #log-in .section #block-ecommify-default-blocks-login-block .content a {
+  margin-top: 10px;
+  margin-left: 15px;
+  display: block;
+  text-decoration: none;
+  font-family: "Ubuntu", sans-serif;
+  text-transform: none;
+  font-style: normal;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 400;
+  color: 10px;
+  height: 20px;
+  color: white;
+  background: url(../images/login-sprite.png) no-repeat 0px 0px;
+  padding-left: 25px;
+  padding-top: 3px;
+  width: 75px;
+  float: left;
+  font-size: 12px;
+  padding-top: 5px;
+}
+/* line 200, ../sass/styles.scss */
+.logged-in #log-in .section #block-ecommify-default-blocks-login-block .content .account-link {
+  width: 76px;
+  margin-left: 17px;
+  background-position: 0px -61px;
+}
+/* line 205, ../sass/styles.scss */
+.logged-in #log-in .section #block-ecommify-default-blocks-login-block .content .logout-link {
+  width: 50px;
+  background-position: 0px -33px;
+  margin-top: 11px;
+}
+
+/* line 216, ../sass/styles.scss */
+.not-logged-in #log-in .section {
+  width: 940px;
+  margin: 0 auto;
+}
+/* line 218, ../sass/styles.scss */
+.not-logged-in #log-in .section #block-ecommify-default-blocks-login-block {
+  float: right;
+  background: url(../images/small-tab.png);
+  width: 115px;
+  height: 42px;
+}
+/* line 223, ../sass/styles.scss */
+.not-logged-in #log-in .section #block-ecommify-default-blocks-login-block a {
+  margin-top: 15px;
+  margin-left: 25px;
+  display: block;
+  text-decoration: none;
+  font-family: "Ubuntu", sans-serif;
+  text-transform: none;
+  font-style: normal;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 400;
+  color: #161616;
+  height: 20px;
+  color: white;
+  background: url(../images/login-sprite.png) no-repeat 0px 0px;
+  padding-left: 25px;
+  padding-top: 3px;
+  font-size: 12px;
+  padding-top: 5px;
+}
+
+/**
+ * Header
+ */
+/* line 245, ../sass/styles.scss */
+#header {
+  width: 940px;
+  margin: 0 auto;
+  padding: 10px 20px;
+}
+/* line 249, ../sass/styles.scss */
+#header #logo {
+  float: left;
+}
+/* line 253, ../sass/styles.scss */
+#header #navigation {
+  float: right;
+  margin-top: 5px;
+}
+/* line 257, ../sass/styles.scss */
+#header #navigation .region-header {
+  height: 30px;
+  margin-bottom: 8px;
+  float: right;
+  width: 640px;
+}
+/* line 264, ../sass/styles.scss */
+#header #navigation #block-views-cart-block-header-block {
+  float: right;
+  margin: 5px 15px 0 0;
+}
+/* line 265, ../sass/styles.scss */
+#header #navigation #block-views-cart-block-header-block h2 {
+  display: none;
+}
+/* line 272, ../sass/styles.scss */
+#header #navigation #block-views-cart-block-header-block .view-cart-block-header {
+  float: left;
+  width: 220px;
+}
+/* line 277, ../sass/styles.scss */
+#header #navigation #block-views-cart-block-header-block .view-cart-block-header a {
+  font-family: "BebasRegular", sans-serif;
+  text-transform: uppercase;
+  font-style: none;
+  text-decoration: none;
+  font-size: 21px;
+  font-weight: 400;
+  color: white;
+  word-spacing: 0.13em;
+  background: url(../images/sprite.png) no-repeat 0px 3px;
+  padding-left: 30px;
+  float: right;
+}
+/* line 284, ../sass/styles.scss */
+#header #navigation #block-views-cart-block-header-block .line-item-summary {
+  margin-bottom: 0px;
+}
+/* line 287, ../sass/styles.scss */
+#header #navigation #block-views-cart-block-header-block .line-item-total, #header #navigation #block-views-cart-block-header-block .views-field-balance {
+  margin-left: 10px;
+  float: right;
+  font-family: "BebasRegular", sans-serif;
+  text-transform: uppercase;
+  font-style: none;
+  text-decoration: none;
+  font-size: 21px;
+  font-weight: 400;
+  color: #bffffd;
+  word-spacing: 0.13em;
+}
+/* line 293, ../sass/styles.scss */
+#header #navigation #block-views-cart-block-header-block .line-item-total-label {
+  display: none;
+}
+/* line 298, ../sass/styles.scss */
+#header #navigation #block-views-exp-seach-results-page {
+  height: 32px;
+  float: right;
+}
+/* line 301, ../sass/styles.scss */
+#header #navigation #block-views-exp-seach-results-page label {
+  display: none;
+}
+/* line 304, ../sass/styles.scss */
+#header #navigation #block-views-exp-seach-results-page .views-exposed-widget {
+  padding: 0px;
+}
+/* line 308, ../sass/styles.scss */
+#header #navigation #block-views-exp-seach-results-page .form-item input {
+  -webkit-transition: width 0.5s;
+  -moz-transition: width 0.5s;
+  -o-transition: width 0.5s;
+  transition: width 0.5s;
+  background: url(../images/sprite.png) no-repeat 0px -43px;
+  border-radius: 15px;
+  border: 2px solid #bffffd;
+  color: #fff;
+  float: right;
+  padding: 5px 10px;
+  width: 5px;
+}
+/* line 318, ../sass/styles.scss */
+#header #navigation #block-views-exp-seach-results-page .form-item input:focus {
+  background-position: 0 -21px;
+  border: 2px solid #fff;
+  width: 211px;
+  outline: none;
+  padding-left: 30px;
+}
+/* line 327, ../sass/styles.scss */
+#header #navigation #block-views-exp-seach-results-page #edit-submit-seach-results {
+  display: none;
+}
+/* line 332, ../sass/styles.scss */
+#header #navigation #main-menu {
+  float: right;
+  text-align: right;
+  clear: both;
+}
+/* line 339, ../sass/styles.scss */
+#header #navigation li {
+  list-style-type: none;
+}
+/* line 341, ../sass/styles.scss */
+#header #navigation li a {
+  font-family: "BebasRegular", sans-serif;
+  text-transform: uppercase;
+  font-style: none;
+  text-decoration: none;
+  font-size: 21px;
+  font-weight: 400;
+  color: white;
+  word-spacing: 0.13em;
+}
+
+/**
+ * Global
+ */
+/* line 354, ../sass/styles.scss */
+.category_title {
+  background: url(../images/heading_seperator.png) repeat;
+  text-align: center;
+}
+/* line 357, ../sass/styles.scss */
+.category_title h1 {
+  display: inline-block;
+  padding: 2px 15px;
+  background: #fff;
+}
+
+/* line 365, ../sass/styles.scss */
+.node-type-article #page-title {
+  display: block;
+}
+
+/* line 370, ../sass/styles.scss */
+.messages {
+  width: 880px;
+  margin: 0 auto!important;
+}
+
+/* line 375, ../sass/styles.scss */
+#page .tabs {
+  border-bottom: none;
+  margin: 10px auto;
+  width: 940px;
+  text-align: right;
+  padding-right: 30px;
+}
+/* line 382, ../sass/styles.scss */
+#page .tabs a {
+  font-family: "Ubuntu", sans-serif;
+  text-transform: none;
+  font-style: normal;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 400;
+  color: white;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+  border-radius: 15px;
+  padding: 3px 10px;
+  border: 1px solid #e96319;
+  background: #e96319;
+}
+/* line 389, ../sass/styles.scss */
+#page .tabs a:hover {
+  background: #e96319;
+  border: 1px solid #e96319;
+}
+/* line 394, ../sass/styles.scss */
+#page .tabs a.active {
+  background: #fff;
+  color: #e96319;
+  border: 1px solid #e96319;
+}
+
+/* line 402, ../sass/styles.scss */
+.main-wrapper {
+  width: 940px;
+  margin: 0 auto;
+  font-family: "Ubuntu", sans-serif;
+  text-transform: none;
+  font-style: normal;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 400;
+  color: #161616;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  background: #fff;
+  margin-top: 10px;
+  padding-bottom: 10px;
+}
+/* line 411, ../sass/styles.scss */
+.main-wrapper #page-title {
+  padding: 10px 0 0 20px;
+}
+/* line 415, ../sass/styles.scss */
+.main-wrapper h1 {
+  font-family: "BebasRegular", sans-serif;
+  text-transform: uppercase;
+  font-style: none;
+  text-decoration: none;
+  font-size: 21px;
+  font-weight: 400;
+  color: #e96319;
+  word-spacing: 0.13em;
+}
+/* line 419, ../sass/styles.scss */
+.main-wrapper h2 {
+  font-family: "BebasRegular", sans-serif;
+  text-transform: uppercase;
+  font-style: none;
+  text-decoration: none;
+  font-size: 21px;
+  font-weight: 400;
+  color: inherit;
+  word-spacing: 0.13em;
+}
+/* line 423, ../sass/styles.scss */
+.main-wrapper p {
+  line-height: 1.7em;
+}
+/* line 427, ../sass/styles.scss */
+.main-wrapper a {
+  font-family: "BebasRegular", sans-serif;
+  text-transform: uppercase;
+  font-style: none;
+  text-decoration: none;
+  font-size: 21px;
+  font-weight: 400;
+  color: inherit;
+  word-spacing: 0.13em;
+}
+/* line 431, ../sass/styles.scss */
+.main-wrapper .region-content {
+  padding: 20px;
+}
+/* line 436, ../sass/styles.scss */
+.main-wrapper .contextual-links a {
+  font-family: "Ubuntu", sans-serif;
+  text-transform: none;
+  font-style: normal;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 400;
+  color: #161616;
+}
+/* line 444, ../sass/styles.scss */
+.main-wrapper input[type=text],
+.main-wrapper input[type=email],
+.main-wrapper input[type=password],
+.main-wrapper textarea {
+  border: 1px solid #161616;
+  padding: 5px;
+}
+/* line 448, ../sass/styles.scss */
+.main-wrapper input[type=text]:focus,
+.main-wrapper input[type=email]:focus,
+.main-wrapper input[type=password]:focus,
+.main-wrapper textarea:focus {
+  border: 1px solid #e96319;
+  outline: none;
+}
+/* line 454, ../sass/styles.scss */
+.main-wrapper .form-required {
+  color: #e96319;
+}
+/* line 458, ../sass/styles.scss */
+.main-wrapper label {
+  padding-bottom: 10px;
+}
+/* line 462, ../sass/styles.scss */
+.main-wrapper .pager {
+  margin: 10px 0 0 0;
+  padding: 0;
+}
+/* line 465, ../sass/styles.scss */
+.main-wrapper .pager li {
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+  margin-right: 10px;
+}
+/* line 471, ../sass/styles.scss */
+.main-wrapper .pager li a {
+  background: #31cbc5;
+  border: 2px solid #31cbc5;
+  display: inline-block;
+  padding: 7px 9px;
+  font-family: "BebasRegular", sans-serif;
+  text-transform: uppercase;
+  font-style: none;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 400;
+  color: white;
+  word-spacing: 0.13em;
+  -webkit-box-shadow: inset 0px 0px 0px 1px white;
+  -moz-box-shadow: inset 0px 0px 0px 1px white;
+  box-shadow: inset 0px 0px 0px 1px white;
+}
+/* line 479, ../sass/styles.scss */
+.main-wrapper .pager li a:hover {
+  background: #e96319;
+  border: 2px solid #e96319;
+}
+/* line 485, ../sass/styles.scss */
+.main-wrapper .pager li.pager-current {
+  background: #e96319;
+  border: 2px solid #e96319;
+  -webkit-box-shadow: inset 0px 0px 0px 1px white;
+  -moz-box-shadow: inset 0px 0px 0px 1px white;
+  box-shadow: inset 0px 0px 0px 1px white;
+  display: inline-block;
+  padding: 7px 9px;
+  font-family: "BebasRegular", sans-serif;
+  text-transform: uppercase;
+  font-style: none;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 400;
+  color: white;
+  word-spacing: 0.13em;
+}
+/* line 496, ../sass/styles.scss */
+.main-wrapper #content .messages {
+  width: 838px;
+}
+
+/* line 502, ../sass/styles.scss */
+.field-name-field-image .field-label {
+  display: none!important;
+}
+
+/* line 506, ../sass/styles.scss */
+.submitted {
+  display: none;
+}
+
+/**
+ * Footer
+ */
+/* line 515, ../sass/styles.scss */
+#footer {
+  width: 940px;
+  margin: 0 auto;
+  background: url(../images/footer_bg.png) repeat-x;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  color: #fff;
+  padding-top: 8px;
+  line-height: 1.2em;
+  margin-bottom: 10px;
+}
+/* line 525, ../sass/styles.scss */
+#footer .section {
+  padding: 20px 0 0 0;
+}
+/* line 529, ../sass/styles.scss */
+#footer h2 {
+  padding: 0px 0 20px 0;
+  font-family: "BebasRegular", sans-serif;
+  text-transform: uppercase;
+  font-style: none;
+  text-decoration: none;
+  font-size: 21px;
+  font-weight: 400;
+  color: white;
+  word-spacing: 0.13em;
+  text-shadow: 0px 1px 0px #b73100;
+}
+/* line 535, ../sass/styles.scss */
+#footer h3 {
+  font-family: "BebasRegular", sans-serif;
+  text-transform: uppercase;
+  font-style: none;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 400;
+  color: white;
+  word-spacing: 0.13em;
+}
+/* line 539, ../sass/styles.scss */
+#footer a {
+  font-family: "Ubuntu", sans-serif;
+  text-transform: none;
+  font-style: normal;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 300;
+  color: white;
+}
+/* line 543, ../sass/styles.scss */
+#footer p {
+  font-family: "Ubuntu", sans-serif;
+  text-transform: none;
+  font-style: normal;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 300;
+  color: white;
+}
+/* line 547, ../sass/styles.scss */
+#footer #block-boxes-contact-us .content {
+  margin-left: 10px;
+  margin-right: 20px;
+}
+/* line 550, ../sass/styles.scss */
+#footer #block-boxes-contact-us .content h3 {
+  margin-bottom: 5px;
+}
+/* line 555, ../sass/styles.scss */
+#footer li {
+  list-style-type: none;
+  list-style-image: none;
+}
+/* line 560, ../sass/styles.scss */
+#footer #block-menu-menu-social-links .content a {
+  margin-bottom: 5px;
+  line-height: 1.2em;
+  display: block;
+}
+/* line 566, ../sass/styles.scss */
+#footer #block-ecommify-default-blocks-powered-by-block {
+  line-height: 1.2em;
+}
+/* line 570, ../sass/styles.scss */
+#footer #block-ecommify-default-blocks-powered-by-block .content .item-list li {
+  margin: 2px 0 2px 10px;
+}
+/* line 573, ../sass/styles.scss */
+#footer #block-ecommify-default-blocks-powered-by-block .content a {
+  background: url(../images/icons.png) no-repeat;
+  display: block;
+  padding: 0 0 0px 20px;
+  margin-bottom: 9px;
+}
+/* line 579, ../sass/styles.scss */
+#footer #block-ecommify-default-blocks-powered-by-block .content .powered_by_lwebg {
+  background-position: 0px -25px;
+}
+/* line 585, ../sass/styles.scss */
+#footer .block {
+  width: 220px;
+  float: left;
+  margin-bottom: 10px;
+}
+/* line 591, ../sass/styles.scss */
+#footer #block-system-main-menu {
+  margin-left: 20px;
+}
+/* line 595, ../sass/styles.scss */
+#footer .social_fb {
+  background: url("../images/icons.png") 0 -75px no-repeat;
+  padding: 2px 0 2px 22px;
+}
+/* line 599, ../sass/styles.scss */
+#footer .social_twitter {
+  background: url("../images/icons.png") 0 -52px no-repeat;
+  padding: 2px 0 2px 22px;
+}
+/* line 603, ../sass/styles.scss */
+#footer .social_gplus {
+  background: url("../images/icons.png") 0 -107px no-repeat;
+  padding: 2px 0 2px 22px;
+}
+/* line 607, ../sass/styles.scss */
+#footer #block-ecommify-default-blocks-copyright-block {
+  font-family: "Ubuntu", sans-serif;
+  text-transform: none;
+  font-style: normal;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 400;
+  color: #161616;
+  clear: both;
+  float: none;
+  width: 100%;
+  background: url(../images/stitches.png) repeat-x;
+  margin: 10px 0 0px 0;
+  padding: 13px 0px 6px 0;
+  text-align: center;
+  color: white;
+  font-size: 13px;
+}
+
+/**
+ * carousel styles
+ */
+/* line 626, ../sass/styles.scss */
+.jcarousel-skin-default .jcarousel-container-horizontal {
+  width: 940px;
+  padding: 0;
+  margin: 0!important;
+}
+/* line 632, ../sass/styles.scss */
+.jcarousel-skin-default .jcarousel-clip-horizontal {
+  width: 870px;
+  padding: 15px 20px;
+}
+/* line 636, ../sass/styles.scss */
+.jcarousel-skin-default .jcarousel-clip-horizontal .jcarousel-item {
+  background: none;
+  border: none;
+  width: 150px;
+  height: 150px;
+}
+/* line 644, ../sass/styles.scss */
+.jcarousel-skin-default .jcarousel-next {
+  background: url(../images/arrows.png) -55px 0px no-repeat;
+  height: 55px;
+  top: 35px;
+  right: 0px;
+}
+/* line 650, ../sass/styles.scss */
+.jcarousel-skin-default .jcarousel-next:hover {
+  background-position: -55px -64px;
+}
+/* line 655, ../sass/styles.scss */
+.jcarousel-skin-default .jcarousel-prev {
+  background: url(../images/arrows.png) -2px 0 no-repeat;
+  height: 55px;
+  top: 35px;
+  left: 0px;
+}
+/* line 661, ../sass/styles.scss */
+.jcarousel-skin-default .jcarousel-prev:hover {
+  background-position: -2px -64px;
+}
+
+/**
+ * Home Page
+ */
+/* line 672, ../sass/styles.scss */
+.front #page-title {
+  display: none;
+}
+/* line 675, ../sass/styles.scss */
+.front #main .region-content {
+  padding: 0px;
+  /* so bokeh texture background can extend all the way across wrapper */
+  /* top bokeh textured area */
+  /* orange featured product area displayed below bokeh textured area */
+}
+/* line 679, ../sass/styles.scss */
+.front #main .region-content .view-featured-content {
+  background: url(../images/bokeh-bg.jpg) no-repeat;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  min-height: 323px;
+  padding-left: 390px;
+  padding-top: 30px;
+}
+/* line 687, ../sass/styles.scss */
+.front #main .region-content .view-featured-content .view-content {
+  position: relative;
+}
+/* line 691, ../sass/styles.scss */
+.front #main .region-content .view-featured-content .views-field-field-image {
+  position: absolute;
+  bottom: -85px;
+  left: -346px;
+}
+/* line 697, ../sass/styles.scss */
+.front #main .region-content .view-featured-content .views-field-body {
+  margin-right: 10px;
+}
+/* line 701, ../sass/styles.scss */
+.front #main .region-content .view-featured-content h2 {
+  font-family: "BebasRegular", sans-serif;
+  text-transform: uppercase;
+  font-style: none;
+  text-decoration: none;
+  font-size: 24px;
+  font-weight: 400;
+  color: white;
+  word-spacing: 0.13em;
+  margin-bottom: 10px;
+}
+/* line 706, ../sass/styles.scss */
+.front #main .region-content .view-featured-content .views-field-nothing {
+  background: #282832;
+  border: 3px solid #282832;
+  display: inline-block;
+  margin-top: 20px;
+}
+/* line 712, ../sass/styles.scss */
+.front #main .region-content .view-featured-content .views-field-nothing:hover {
+  border: 3px solid #e96319;
+}
+/* line 716, ../sass/styles.scss */
+.front #main .region-content .view-featured-content .views-field-nothing a {
+  font-family: "BebasRegular", sans-serif;
+  text-transform: uppercase;
+  font-style: none;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 400;
+  color: white;
+  word-spacing: 0.13em;
+  display: inline-block;
+  padding: 10px 15px;
+  border: 2px solid #fff;
+}
+/* line 721, ../sass/styles.scss */
+.front #main .region-content .view-featured-content .views-field-nothing a:hover {
+  background: #e96319;
+}
+/* line 726, ../sass/styles.scss */
+.front #main .region-content .view-featured-content .views-field-nothing img {
+  margin-right: 20px;
+}
+/* line 733, ../sass/styles.scss */
+.front #main .region-content #block-views-featured-product-block {
+  position: relative;
+  background: url(../images/banner_bg.gif) repeat-x;
+}
+/* line 64, ../sass/styles.scss */
+.front #main .region-content #block-views-featured-product-block h2 {
+  text-align: center;
+  padding: 14px 0;
+  font-family: "BebasRegular", sans-serif;
+  text-transform: uppercase;
+  font-style: none;
+  text-decoration: none;
+  font-size: 21px;
+  font-weight: 400;
+  color: white;
+  word-spacing: 0.13em;
+  text-shadow: 0px 1px 0px #b73100;
+}
+/* line 72, ../sass/styles.scss */
+.front #main .region-content #block-views-featured-product-block .view-header .banner_left {
+  position: absolute;
+  top: -49px;
+  left: -10px;
+  width: 10px;
+  height: 205px;
+  background: url(../images/banner_left.png) no-repeat;
+}
+/* line 81, ../sass/styles.scss */
+.front #main .region-content #block-views-featured-product-block .view-header .banner_right {
+  position: absolute;
+  top: -49px;
+  right: -10px;
+  width: 10px;
+  height: 205px;
+  background: url(../images/banner_right.png) no-repeat;
+}
+/* line 91, ../sass/styles.scss */
+.front #main .region-content #block-views-featured-product-block .view-featured-product {
+  height: 149px;
+  position: relative;
+  padding-bottom: 20px;
+}
+/* line 737, ../sass/styles.scss */
+.front #main .region-content #block-system-main {
+  float: left;
+  width: 440px;
+  padding-left: 20px;
+  margin-right: 40px;
+}
+/* line 743, ../sass/styles.scss */
+.front #main .region-content #block-system-main .title_wrap {
+  background: url(../images/heading_seperator.png) repeat;
+  margin-bottom: 10px;
+}
+/* line 747, ../sass/styles.scss */
+.front #main .region-content #block-system-main .title_wrap h1 {
+  background: #fff;
+  display: inline-block;
+  padding: 1px 5px 2px 0;
+}
+/* line 755, ../sass/styles.scss */
+.front #main .region-content #block-views-latest-news-block {
+  width: 420px;
+  float: left;
+}
+/* line 759, ../sass/styles.scss */
+.front #main .region-content #block-views-latest-news-block .title_wrap {
+  background: url(../images/heading_seperator.png) repeat;
+  margin-bottom: 10px;
+}
+/* line 763, ../sass/styles.scss */
+.front #main .region-content #block-views-latest-news-block .title_wrap h2 {
+  background: #fff;
+  color: #e96319;
+  display: inline-block;
+  padding: 1px 5px 2px 0;
+}
+/* line 772, ../sass/styles.scss */
+.front #main .region-content #block-views-latest-news-block .content .views-row {
+  margin: 10px 0 20px 0;
+  clear: both;
+}
+/* line 776, ../sass/styles.scss */
+.front #main .region-content #block-views-latest-news-block .content .views-row .views-field-title a {
+  font-family: "BebasRegular", sans-serif;
+  text-transform: uppercase;
+  font-style: none;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 400;
+  color: #31cbc5;
+  word-spacing: 0.13em;
+}
+/* line 780, ../sass/styles.scss */
+.front #main .region-content #block-views-latest-news-block .content .views-row .views-field-field-image {
+  float: left;
+  margin-right: 10px;
+}
+/* line 785, ../sass/styles.scss */
+.front #main .region-content #block-views-latest-news-block .content .views-row .views-field-body {
+  font-size: 12px;
+  padding-bottom: 2px;
+}
+/* line 790, ../sass/styles.scss */
+.front #main .region-content #block-views-latest-news-block .content .views-row .views-field-view-node a {
+  font-family: "Ubuntu", sans-serif;
+  text-transform: none;
+  font-style: normal;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 400;
+  color: #e96319;
+}
+/* line 792, ../sass/styles.scss */
+.front #main .region-content #block-views-latest-news-block .content .views-row .views-field-view-node a:hover {
+  text-decoration: underline;
+}
+
+/**
+ *  Category Page
+ */
+/* line 807, ../sass/styles.scss */
+.page-taxonomy-term #breadcrumb {
+  display: none;
+}
+/* line 811, ../sass/styles.scss */
+.page-taxonomy-term .region-content {
+  padding: 0px;
+}
+/* line 815, ../sass/styles.scss */
+.page-taxonomy-term #block-system-main {
+  padding: 20px;
+}
+/* line 819, ../sass/styles.scss */
+.page-taxonomy-term #block-views-promotion-display-block {
+  background: url(../images/bokeh-bg.jpg) no-repeat;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  min-height: 323px;
+  position: relative;
+  padding-left: 390px;
+  padding-top: 30px;
+}
+/* line 827, ../sass/styles.scss */
+.page-taxonomy-term #block-views-promotion-display-block .content {
+  position: relative;
+}
+/* line 831, ../sass/styles.scss */
+.page-taxonomy-term #block-views-promotion-display-block .views-field-field-image {
+  position: absolute;
+  bottom: -90px;
+  left: -386px;
+}
+/* line 838, ../sass/styles.scss */
+.page-taxonomy-term #block-views-promotion-display-block .views-field-title h2 {
+  font-family: "BebasRegular", sans-serif;
+  text-transform: uppercase;
+  font-style: none;
+  text-decoration: none;
+  font-size: 24px;
+  font-weight: 400;
+  color: white;
+  word-spacing: 0.13em;
+  padding: 40px 0 10px 0;
+}
+/* line 843, ../sass/styles.scss */
+.page-taxonomy-term #block-views-promotion-display-block .views-field-body {
+  font-family: "Ubuntu", sans-serif;
+  text-transform: none;
+  font-style: normal;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 400;
+  color: #282832;
+  line-height: 1.9em;
+}
+/* line 849, ../sass/styles.scss */
+.page-taxonomy-term #content .views-exposed-form {
+  padding: 10px 0;
+}
+/* line 852, ../sass/styles.scss */
+.page-taxonomy-term #content .views-exposed-form label {
+  font-weight: 400;
+}
+/* line 857, ../sass/styles.scss */
+.page-taxonomy-term #content .views-exposed-form .views-exposed-widget a {
+  float: left;
+  font-family: "Ubuntu", sans-serif;
+  text-transform: none;
+  font-style: normal;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 400;
+  color: #161616;
+}
+/* line 860, ../sass/styles.scss */
+.page-taxonomy-term #content .views-exposed-form .views-exposed-widget a:hover {
+  color: #e96319;
+}
+/* line 866, ../sass/styles.scss */
+.page-taxonomy-term #content .views-exposed-form .views-widget-per-page {
+  width: 200px;
+}
+/* line 870, ../sass/styles.scss */
+.page-taxonomy-term #content .views-exposed-form .views-exposed-widget.views-submit-button {
+  float: right;
+}
+
+/* line 879, ../sass/styles.scss */
+.view-seach-results .bef_links_sepearator, .view-product-listing .bef_links_sepearator {
+  float: left;
+  padding: 0 4px;
+}
+/* line 884, ../sass/styles.scss */
+.view-seach-results .views-row, .view-product-listing .views-row {
+  float: left;
+  width: 429px;
+  margin: 10px 0 30px 0;
+}
+/* line 889, ../sass/styles.scss */
+.view-seach-results .views-row .views-field-field-image, .view-seach-results .views-row .views-field-field-image-1, .view-product-listing .views-row .views-field-field-image, .view-product-listing .views-row .views-field-field-image-1 {
+  clear: both;
+}
+/* line 891, ../sass/styles.scss */
+.view-seach-results .views-row .views-field-field-image img, .view-seach-results .views-row .views-field-field-image-1 img, .view-product-listing .views-row .views-field-field-image img, .view-product-listing .views-row .views-field-field-image-1 img {
+  margin: 10px 15px 0 0;
+  float: left;
+  -webkit-transition: margin 0.2s;
+  -moz-transition: margin 0.2s;
+  -o-transition: margin 0.2s;
+  transition: margin 0.2s;
+}
+/* line 895, ../sass/styles.scss */
+.view-seach-results .views-row .views-field-field-image img:hover, .view-seach-results .views-row .views-field-field-image-1 img:hover, .view-product-listing .views-row .views-field-field-image img:hover, .view-product-listing .views-row .views-field-field-image-1 img:hover {
+  margin: 0px 15px 10px 0;
+}
+/* line 901, ../sass/styles.scss */
+.view-seach-results .views-row .views-field-field-product-reference-commerce-price-amount-decimal, .view-seach-results .views-row .views-field-commerce-price, .view-product-listing .views-row .views-field-field-product-reference-commerce-price-amount-decimal, .view-product-listing .views-row .views-field-commerce-price {
+  margin: 10px 0;
+  font-family: "Ubuntu", sans-serif;
+  text-transform: none;
+  font-style: normal;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 200;
+  color: #e96319;
+}
+/* line 906, ../sass/styles.scss */
+.view-seach-results .views-row .views-field-view-node, .view-product-listing .views-row .views-field-view-node {
+  border: 2px solid #31cbc5;
+  display: inline-block;
+}
+/* line 910, ../sass/styles.scss */
+.view-seach-results .views-row .views-field-view-node:hover, .view-product-listing .views-row .views-field-view-node:hover {
+  border: 2px solid #e96319;
+}
+/* line 914, ../sass/styles.scss */
+.view-seach-results .views-row .views-field-view-node a, .view-product-listing .views-row .views-field-view-node a {
+  font-family: "BebasRegular", sans-serif;
+  text-transform: uppercase;
+  font-style: none;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 400;
+  color: white;
+  word-spacing: 0.13em;
+  padding: 9px 15px;
+  background: #31cbc5;
+  border: 1px solid #fff;
+  display: block;
+}
+/* line 921, ../sass/styles.scss */
+.view-seach-results .views-row .views-field-view-node a:hover, .view-product-listing .views-row .views-field-view-node a:hover {
+  background: #e96319;
+}
+/* line 927, ../sass/styles.scss */
+.view-seach-results .views-row.views-row-odd, .view-product-listing .views-row.views-row-odd {
+  clear: both;
+}
+
+/* line 935, ../sass/styles.scss */
+.breadcrumb {
+  padding: 20px 0 0 20px;
+}
+/* line 51, ../sass/styles.scss */
+.breadcrumb a {
+  font-family: "Ubuntu", sans-serif;
+  text-transform: none;
+  font-style: normal;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 400;
+  color: #161616;
+  display: block;
+}
+/* line 54, ../sass/styles.scss */
+.breadcrumb a:hover {
+  color: #31cbc5;
+}
+
+/**
+ * Product Display
+ */
+/* line 943, ../sass/styles.scss */
+.node-type-product-display .title {
+  display: none;
+}
+/* line 947, ../sass/styles.scss */
+.node-type-product-display .region-content {
+  padding: 0px;
+}
+/* line 951, ../sass/styles.scss */
+.node-type-product-display .title_area {
+  background: url(../images/heading_seperator.png) repeat;
+  margin-bottom: 10px;
+}
+/* line 955, ../sass/styles.scss */
+.node-type-product-display .title_area h2 {
+  background: #fff;
+  font-family: "BebasRegular", sans-serif;
+  text-transform: uppercase;
+  font-style: none;
+  text-decoration: none;
+  font-size: 21px;
+  font-weight: 400;
+  color: #e96319;
+  word-spacing: 0.13em;
+  display: inline-block;
+  padding: 1px 8px 2px 0;
+}
+/* line 963, ../sass/styles.scss */
+.node-type-product-display .node {
+  padding: 20px;
+}
+/* line 966, ../sass/styles.scss */
+.node-type-product-display .node .commerce-product-field-field-image {
+  float: left;
+  width: 312px;
+  margin-right: 20px;
+}
+/* line 972, ../sass/styles.scss */
+.node-type-product-display .node .commerce-product-extra-field-title {
+  font-family: "BebasRegular", sans-serif;
+  text-transform: uppercase;
+  font-style: none;
+  text-decoration: none;
+  font-size: 21px;
+  font-weight: 400;
+  color: #e96319;
+  word-spacing: 0.13em;
+}
+/* line 975, ../sass/styles.scss */
+.node-type-product-display .node .commerce-product-extra-field-title .commerce-product-title-label {
+  display: none;
+}
+/* line 980, ../sass/styles.scss */
+.node-type-product-display .node .commerce-product-field-commerce-price {
+  font-family: "BebasRegular", sans-serif;
+  text-transform: uppercase;
+  font-style: none;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 400;
+  color: #31cbc5;
+  word-spacing: 0.13em;
+  margin: 10px 0;
+}
+/* line 986, ../sass/styles.scss */
+.node-type-product-display .node .field-name-field-product-reference .form-submit {
+  background: url(../images/sprite-add-cart.png) 10px 2px no-repeat #31cbc5;
+  border: 2px solid #31cbc5;
+  padding: 10px 15px 10px 40px;
+  -webkit-box-shadow: inset 0px 0px 0px 1px white;
+  -moz-box-shadow: inset 0px 0px 0px 1px white;
+  box-shadow: inset 0px 0px 0px 1px white;
+  font-family: "BebasRegular", sans-serif;
+  text-transform: uppercase;
+  font-style: none;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 400;
+  color: white;
+  word-spacing: 0.13em;
+  -webkit-transition: background-position 0.5s;
+  -moz-transition: background-position 0.5s;
+  -o-transition: background-position 0.5s;
+  transition: background-position 0.5s;
+}
+/* line 994, ../sass/styles.scss */
+.node-type-product-display .node .field-name-field-product-reference .form-submit:hover {
+  background-position: 10px -38px;
+  background-color: #e96319;
+  border: 2px solid #e96319;
+  cursor: pointer;
+}
+/* line 1003, ../sass/styles.scss */
+.node-type-product-display .node #comments {
+  clear: both;
+}
+/* line 1004, ../sass/styles.scss */
+.node-type-product-display .node #comments .title {
+  background: url(../images/heading_seperator.png) repeat;
+}
+/* line 1011, ../sass/styles.scss */
+.node-type-product-display #block-views-other-products-block {
+  height: 200px;
+  margin-bottom: 10px;
+  position: relative;
+  background: url(../images/banner_bg.gif) repeat-x;
+}
+/* line 64, ../sass/styles.scss */
+.node-type-product-display #block-views-other-products-block h2 {
+  text-align: center;
+  padding: 14px 0;
+  font-family: "BebasRegular", sans-serif;
+  text-transform: uppercase;
+  font-style: none;
+  text-decoration: none;
+  font-size: 21px;
+  font-weight: 400;
+  color: white;
+  word-spacing: 0.13em;
+  text-shadow: 0px 1px 0px #b73100;
+}
+/* line 72, ../sass/styles.scss */
+.node-type-product-display #block-views-other-products-block .view-header .banner_left {
+  position: absolute;
+  top: -49px;
+  left: -10px;
+  width: 10px;
+  height: 205px;
+  background: url(../images/banner_left.png) no-repeat;
+}
+/* line 81, ../sass/styles.scss */
+.node-type-product-display #block-views-other-products-block .view-header .banner_right {
+  position: absolute;
+  top: -49px;
+  right: -10px;
+  width: 10px;
+  height: 205px;
+  background: url(../images/banner_right.png) no-repeat;
+}
+/* line 91, ../sass/styles.scss */
+.node-type-product-display #block-views-other-products-block .view-featured-product {
+  height: 149px;
+  position: relative;
+  padding-bottom: 20px;
+}
+/* line 1017, ../sass/styles.scss */
+.node-type-product-display #block-views-other-products-block .banner_left,
+.node-type-product-display #block-views-other-products-block .banner_right {
+  top: 0!important;
+}
+/* line 1022, ../sass/styles.scss */
+.node-type-product-display #block-views-categories-block {
+  float: left;
+  width: 408px;
+  margin: 0px 90px 0px 20px;
+}
+/* line 1027, ../sass/styles.scss */
+.node-type-product-display #block-views-categories-block li {
+  margin: 0 0 20px 0;
+}
+/* line 1032, ../sass/styles.scss */
+.node-type-product-display #block-views-categories-block .content a {
+  border: 2px solid #31cbc5;
+  display: block;
+}
+/* line 1036, ../sass/styles.scss */
+.node-type-product-display #block-views-categories-block .content a img {
+  border: 2px solid #fff;
+}
+/* line 1043, ../sass/styles.scss */
+.node-type-product-display #block-views-comments-block-block {
+  padding: 0 20px;
+  clear: both;
+}
+/* line 1048, ../sass/styles.scss */
+.node-type-product-display #block-commentsblock-comment-form-block {
+  clear: both;
+  padding: 20px;
+}
+/* line 1054, ../sass/styles.scss */
+.node-type-product-display #block-views-comments-block-block .title_area {
+  margin-bottom: 20px;
+}
+/* line 1058, ../sass/styles.scss */
+.node-type-product-display #block-views-comments-block-block .views-row {
+  margin: 0 0 10px 0;
+}
+/* line 1060, ../sass/styles.scss */
+.node-type-product-display #block-views-comments-block-block .views-row h3 {
+  font-family: "BebasRegular", sans-serif;
+  text-transform: uppercase;
+  font-style: none;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 400;
+  color: #e96319;
+  word-spacing: 0.13em;
+  float: left;
+  padding-bottom: 5px;
+}
+/* line 1066, ../sass/styles.scss */
+.node-type-product-display #block-views-comments-block-block .views-row .views-field-created {
+  float: right;
+  color: #31cbc5;
+}
+/* line 1071, ../sass/styles.scss */
+.node-type-product-display #block-views-comments-block-block .views-row .views-field-name {
+  color: #31cbc5;
+  font-size: 12px;
+}
+/* line 1076, ../sass/styles.scss */
+.node-type-product-display #block-views-comments-block-block .views-row .views-field-comment-body {
+  clear: both;
+}
+/* line 1082, ../sass/styles.scss */
+.node-type-product-display #block-views-related-products-block {
+  float: left;
+  width: 400px;
+}
+/* line 1086, ../sass/styles.scss */
+.node-type-product-display #block-views-related-products-block .views-row {
+  min-height: 120px;
+  margin: 0 0 15px 0;
+}
+/* line 1090, ../sass/styles.scss */
+.node-type-product-display #block-views-related-products-block .views-row .views-field-field-image {
+  clear: both;
+}
+/* line 1092, ../sass/styles.scss */
+.node-type-product-display #block-views-related-products-block .views-row .views-field-field-image img {
+  margin: 0px 15px 0 0;
+  float: left;
+}
+/* line 1098, ../sass/styles.scss */
+.node-type-product-display #block-views-related-products-block .views-row .views-field-commerce-price {
+  margin: 10px 0;
+  font-family: "Ubuntu", sans-serif;
+  text-transform: none;
+  font-style: normal;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 200;
+  color: #e96319;
+}
+/* line 1103, ../sass/styles.scss */
+.node-type-product-display #block-views-related-products-block .views-row .views-field-view-node {
+  border: 2px solid #31cbc5;
+  display: inline-block;
+}
+/* line 1107, ../sass/styles.scss */
+.node-type-product-display #block-views-related-products-block .views-row .views-field-view-node:hover {
+  border: 2px solid #e96319;
+}
+/* line 1111, ../sass/styles.scss */
+.node-type-product-display #block-views-related-products-block .views-row .views-field-view-node a {
+  font-family: "BebasRegular", sans-serif;
+  text-transform: uppercase;
+  font-style: none;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 400;
+  color: white;
+  word-spacing: 0.13em;
+  padding: 9px 15px;
+  background: #31cbc5;
+  border: 1px solid #fff;
+  display: block;
+}
+/* line 1118, ../sass/styles.scss */
+.node-type-product-display #block-views-related-products-block .views-row .views-field-view-node a:hover {
+  background: #e96319;
+}
+
+/* line 1129, ../sass/styles.scss */
+#page #block-commerce-checkout-progress-indication {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  background: url(../images/small_banner.png) no-repeat;
+  width: 903px!important;
+  padding: 0px 40px 0 35px;
+  margin-left: -39px;
+  height: 58px;
+  font-family: "BebasRegular", sans-serif;
+  text-transform: uppercase;
+  font-style: none;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 400;
+  color: white;
+  word-spacing: 0.13em;
+  text-shadow: 0px 1px 0px #b73100;
+}
+/* line 1140, ../sass/styles.scss */
+#page #block-commerce-checkout-progress-indication li {
+  text-align: left;
+  padding-top: 16px;
+}
+/* line 1143, ../sass/styles.scss */
+#page #block-commerce-checkout-progress-indication li.visited {
+  width: 100px;
+  height: 50px;
+  display: block;
+  padding: 16px 0px 0px 40px;
+  background: url(../images/checkbox-ribbon.png) no-repeat;
+}
+/* line 1151, ../sass/styles.scss */
+#page #block-commerce-checkout-progress-indication li.visited a {
+  font-family: "BebasRegular", sans-serif;
+  text-transform: uppercase;
+  font-style: none;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 400;
+  color: white;
+  word-spacing: 0.13em;
+  text-shadow: 0px 1px 0px #b73100;
+}
+/* line 1160, ../sass/styles.scss */
+#page #block-commerce-checkout-progress-indication ol.inline.commerce-checkout-progress li.last {
+  width: 170px;
+}
+
+/* line 1169, ../sass/styles.scss */
+.page-checkout .views-table {
+  width: 100%;
+}
+/* line 1172, ../sass/styles.scss */
+.page-checkout .cart_contents legend {
+  display: none;
+}
+/* line 1177, ../sass/styles.scss */
+.page-checkout .view-commerce-cart-summary {
+  width: 900px;
+}
+/* line 1181, ../sass/styles.scss */
+.page-checkout .view-commerce-cart-summary thead tr {
+  border-bottom: 1px solid #ccc;
+}
+/* line 1183, ../sass/styles.scss */
+.page-checkout .view-commerce-cart-summary thead tr th {
+  padding-bottom: 15px;
+  font-family: "BebasRegular", sans-serif;
+  text-transform: uppercase;
+  font-style: none;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 400;
+  color: #e96319;
+  word-spacing: 0.13em;
+}
+/* line 1190, ../sass/styles.scss */
+.page-checkout .view-commerce-cart-summary tr {
+  width: 100%;
+  background: none;
+}
+/* line 1193, ../sass/styles.scss */
+.page-checkout .view-commerce-cart-summary tr td {
+  vertical-align: middle;
+  padding: 10px 0;
+}
+/* line 1197, ../sass/styles.scss */
+.page-checkout .view-commerce-cart-summary tr td.views-field-line-item-title {
+  width: 505px;
+}
+/* line 1201, ../sass/styles.scss */
+.page-checkout .view-commerce-cart-summary tr td.views-field-field-image {
+  width: 120px;
+}
+/* line 1205, ../sass/styles.scss */
+.page-checkout .view-commerce-cart-summary tr td.views-field-commerce-unit-price {
+  width: 100px;
+}
+/* line 1209, ../sass/styles.scss */
+.page-checkout .view-commerce-cart-summary tr td.views-field-edit-quantity {
+  width: 100px;
+}
+/* line 1212, ../sass/styles.scss */
+.page-checkout .view-commerce-cart-summary tr td.views-field-edit-quantity input {
+  border: 1px solid #fff;
+}
+/* line 1215, ../sass/styles.scss */
+.page-checkout .view-commerce-cart-summary tr td.views-field-edit-quantity input:hover {
+  border: 1px solid #161616;
+}
+/* line 1219, ../sass/styles.scss */
+.page-checkout .view-commerce-cart-summary tr td.views-field-edit-quantity input:focus {
+  border: 1px solid #e96319;
+}
+/* line 1225, ../sass/styles.scss */
+.page-checkout .view-commerce-cart-summary tr td.views-field-commerce-total {
+  width: 100px;
+}
+/* line 1229, ../sass/styles.scss */
+.page-checkout .view-commerce-cart-summary tr td.views-field-edit-delete {
+  width: 100px;
+}
+/* line 1232, ../sass/styles.scss */
+.page-checkout .view-commerce-cart-summary tr td.views-field-edit-delete input {
+  background: url(../images/x.png) 22px 0px no-repeat;
+  width: 100%;
+  height: 10px;
+  border: none;
+  display: block;
+  text-indent: -999px;
+  text-align: middle;
+}
+/* line 1241, ../sass/styles.scss */
+.page-checkout .view-commerce-cart-summary tr td.views-field-edit-delete input:hover {
+  background-position: 22px -14px;
+}
+/* line 1250, ../sass/styles.scss */
+.page-checkout .view-commerce-cart-summary .line-item-summary > div {
+  padding: 10px 75px 10px 0;
+}
+/* line 1253, ../sass/styles.scss */
+.page-checkout .view-commerce-cart-summary .line-item-summary > div :first-child {
+  font-family: "BebasRegular", sans-serif;
+  text-transform: uppercase;
+  font-style: none;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 400;
+  color: #e96319;
+  word-spacing: 0.13em;
+  padding-right: 20px;
+}
+/* line 1261, ../sass/styles.scss */
+.page-checkout legend {
+  font-family: "BebasRegular", sans-serif;
+  text-transform: uppercase;
+  font-style: none;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 400;
+  color: #e96319;
+  word-spacing: 0.13em;
+}
+/* line 1265, ../sass/styles.scss */
+.page-checkout .customer_profile_billing {
+  border: 1px solid #ccc;
+  margin: 10px 0 20px 0;
+  padding: 10px;
+  width: 415px;
+  margin-left: 20px;
+  float: left;
+}
+/* line 1274, ../sass/styles.scss */
+.page-checkout .customer_profile_shipping {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 10px 0 0 0;
+  width: 415px;
+  float: left;
+}
+/* line 1282, ../sass/styles.scss */
+.page-checkout .checkout-buttons {
+  clear: both;
+  float: right;
+  margin: 10px 0;
+}
+/* line 1287, ../sass/styles.scss */
+.page-checkout .checkout-buttons #edit-continue {
+  background: #e96319;
+  border: 2px solid #e96319;
+  -webkit-box-shadow: inset 0px 0px 0px 1px white;
+  -moz-box-shadow: inset 0px 0px 0px 1px white;
+  box-shadow: inset 0px 0px 0px 1px white;
+  padding: 7px 15px 7px 15px;
+  font-family: "BebasRegular", sans-serif;
+  text-transform: uppercase;
+  font-style: none;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 400;
+  color: white;
+  word-spacing: 0.13em;
+  -webkit-transition: background-position 0.5s;
+  -moz-transition: background-position 0.5s;
+  -o-transition: background-position 0.5s;
+  transition: background-position 0.5s;
+  margin-right: 5px;
+}
+/* line 1296, ../sass/styles.scss */
+.page-checkout .checkout-buttons #edit-continue:hover {
+  cursor: pointer;
+}
+/* line 1302, ../sass/styles.scss */
+.page-checkout .checkout-buttons .checkout-cancel {
+  color: #31cbc5;
+}
+/* line 1305, ../sass/styles.scss */
+.page-checkout .checkout-buttons .checkout-cancel:hover {
+  cursor: pointer;
+}
+/* line 1313, ../sass/styles.scss */
+.page-checkout #commerce-shipping-service-ajax-wrapper legend {
+  margin-bottom: 10px;
+}
+/* line 1319, ../sass/styles.scss */
+.page-checkout .checkout-review {
+  width: 800px;
+}
+/* line 1322, ../sass/styles.scss */
+.page-checkout .checkout-review .pane-title {
+  background: none;
+}
+/* line 1325, ../sass/styles.scss */
+.page-checkout .checkout-review .pane-title td {
+  font-family: "BebasRegular", sans-serif;
+  text-transform: uppercase;
+  font-style: none;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 400;
+  color: #e96319;
+  word-spacing: 0.13em;
+  padding: 5px 0;
+}
+/* line 1331, ../sass/styles.scss */
+.page-checkout .checkout-review .pane-data {
+  background: none;
+  line-height: 1.3em;
+}
+/* line 1335, ../sass/styles.scss */
+.page-checkout .checkout-review .pane-data label {
+  font-weight: bold;
+  padding-bottom: 2px;
+}
+/* line 1340, ../sass/styles.scss */
+.page-checkout .checkout-review .pane-data td {
+  padding: 5px 0;
+}
+/* line 1344, ../sass/styles.scss */
+.page-checkout .checkout-review .pane-data .component-type-commerce-price-formatted-amount {
+  border-bottom: none;
+}
+/* line 1351, ../sass/styles.scss */
+.page-checkout .commerce_payment legend {
+  margin-bottom: 5px;
+}
+/* line 1358, ../sass/styles.scss */
+.page-checkout .checkout-completion-message a {
+  font-family: "Ubuntu", sans-serif;
+  text-transform: none;
+  font-style: normal;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 400;
+  color: #e96319;
+}
+/* line 1363, ../sass/styles.scss */
+.page-checkout #block-system-main {
+  clear: both;
+}
+
+/* line 1370, ../sass/styles.scss */
+.page-cart .view-commerce-cart-form {
+  width: 900px;
+}
+/* line 1373, ../sass/styles.scss */
+.page-cart .view-commerce-cart-form thead tr {
+  border-bottom: 1px solid #ccc;
+}
+/* line 1375, ../sass/styles.scss */
+.page-cart .view-commerce-cart-form thead tr th {
+  padding-bottom: 15px;
+  font-family: "BebasRegular", sans-serif;
+  text-transform: uppercase;
+  font-style: none;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 400;
+  color: #e96319;
+  word-spacing: 0.13em;
+}
+/* line 1382, ../sass/styles.scss */
+.page-cart .view-commerce-cart-form tr {
+  width: 100%;
+  background: none;
+}
+/* line 1385, ../sass/styles.scss */
+.page-cart .view-commerce-cart-form tr td {
+  vertical-align: middle;
+  padding: 10px 0;
+}
+/* line 1389, ../sass/styles.scss */
+.page-cart .view-commerce-cart-form tr td.views-field-line-item-title {
+  width: 400px;
+}
+/* line 1393, ../sass/styles.scss */
+.page-cart .view-commerce-cart-form tr td.views-field-field-image {
+  width: 120px;
+}
+/* line 1397, ../sass/styles.scss */
+.page-cart .view-commerce-cart-form tr td.views-field-commerce-unit-price {
+  width: 100px;
+}
+/* line 1401, ../sass/styles.scss */
+.page-cart .view-commerce-cart-form tr td.views-field-edit-quantity {
+  width: 100px;
+}
+/* line 1404, ../sass/styles.scss */
+.page-cart .view-commerce-cart-form tr td.views-field-edit-quantity input {
+  border: 1px solid #fff;
+}
+/* line 1407, ../sass/styles.scss */
+.page-cart .view-commerce-cart-form tr td.views-field-edit-quantity input:hover {
+  border: 1px solid #161616;
+}
+/* line 1411, ../sass/styles.scss */
+.page-cart .view-commerce-cart-form tr td.views-field-edit-quantity input:focus {
+  border: 1px solid #e96319;
+}
+/* line 1417, ../sass/styles.scss */
+.page-cart .view-commerce-cart-form tr td.views-field-commerce-total {
+  width: 100px;
+}
+/* line 1421, ../sass/styles.scss */
+.page-cart .view-commerce-cart-form tr td.views-field-edit-delete {
+  width: 100px;
+}
+/* line 1424, ../sass/styles.scss */
+.page-cart .view-commerce-cart-form tr td.views-field-edit-delete input {
+  background: url(../images/x.png) 22px 0px no-repeat;
+  width: 100%;
+  height: 10px;
+  border: none;
+  display: block;
+  text-indent: -999px;
+  text-align: middle;
+}
+/* line 1433, ../sass/styles.scss */
+.page-cart .view-commerce-cart-form tr td.views-field-edit-delete input:hover {
+  background-position: 22px -14px;
+}
+/* line 1442, ../sass/styles.scss */
+.page-cart .view-commerce-cart-form .line-item-summary > div {
+  padding: 10px 75px 10px 0;
+}
+/* line 1445, ../sass/styles.scss */
+.page-cart .view-commerce-cart-form .line-item-summary > div :first-child {
+  font-family: "BebasRegular", sans-serif;
+  text-transform: uppercase;
+  font-style: none;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 400;
+  color: #e96319;
+  word-spacing: 0.13em;
+  padding-right: 20px;
+}
+/* line 1452, ../sass/styles.scss */
+.page-cart .view-commerce-cart-form .form-actions {
+  margin-top: 10px;
+}
+/* line 1455, ../sass/styles.scss */
+.page-cart .view-commerce-cart-form .form-actions #edit-submit {
+  background: url(../images/sprite-refresh.png) #31cbc5 8px 0px no-repeat;
+  border: 2px solid #31cbc5;
+  padding: 7px 10px 7px 37px;
+  margin-right: 10px;
+  font-family: "BebasRegular", sans-serif;
+  text-transform: uppercase;
+  font-style: none;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 400;
+  color: white;
+  word-spacing: 0.13em;
+  -webkit-box-shadow: inset 0px 0px 0px 1px white;
+  -moz-box-shadow: inset 0px 0px 0px 1px white;
+  box-shadow: inset 0px 0px 0px 1px white;
+  -webkit-transition: background-position 0.5s;
+  -moz-transition: background-position 0.5s;
+  -o-transition: background-position 0.5s;
+  transition: background-position 0.5s;
+}
+/* line 1464, ../sass/styles.scss */
+.page-cart .view-commerce-cart-form .form-actions #edit-submit:hover {
+  background-position: 8px -41px;
+  cursor: pointer;
+}
+/* line 1470, ../sass/styles.scss */
+.page-cart .view-commerce-cart-form .form-actions #edit-checkout {
+  background: url(../images/sprite-checkout.png) #e96319 4px 2px no-repeat;
+  border: 2px solid #e96319;
+  -webkit-box-shadow: inset 0px 0px 0px 1px white;
+  -moz-box-shadow: inset 0px 0px 0px 1px white;
+  box-shadow: inset 0px 0px 0px 1px white;
+  padding: 7px 10px 7px 32px;
+  font-family: "BebasRegular", sans-serif;
+  text-transform: uppercase;
+  font-style: none;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 400;
+  color: white;
+  word-spacing: 0.13em;
+  -webkit-transition: background-position 0.5s;
+  -moz-transition: background-position 0.5s;
+  -o-transition: background-position 0.5s;
+  transition: background-position 0.5s;
+}
+/* line 1477, ../sass/styles.scss */
+.page-cart .view-commerce-cart-form .form-actions #edit-checkout:hover {
+  background-position: 4px -41px;
+  cursor: pointer;
+}
+
+/* line 1487, ../sass/styles.scss */
+.page-cart #page-title, .page-checkout #page-title {
+  padding-top: 30px;
+  display: block;
+}
+
+/* line 1496, ../sass/styles.scss */
+.node-type-article .field-name-body a {
+  font-family: "Ubuntu", sans-serif;
+  text-transform: none;
+  font-style: normal;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 400;
+  color: #e96319;
+}
+
+/* line 1502, ../sass/styles.scss */
+.breadcrumb {
+  display: none;
+}
+
+/* line 1505, ../sass/styles.scss */
+#page-title {
+  display: none;
+}
+
+/* line 1509, ../sass/styles.scss */
+.page-contact #page-title {
+  display: block;
+}
+/* line 1512, ../sass/styles.scss */
+.page-contact #block-system-main {
+  width: 500px;
+  margin-right: 50px;
+  float: left;
+}
+/* line 1518, ../sass/styles.scss */
+.page-contact #block-system-main input[type=text],
+.page-contact #block-system-main input[type=email] {
+  width: 490px;
+}
+/* line 1523, ../sass/styles.scss */
+.page-contact #block-boxes-get-in-touch {
+  width: 350px;
+  margin-bottom: 10px;
+  float: left;
+}
+/* line 1528, ../sass/styles.scss */
+.page-contact #block-boxes-get-in-touch h2 {
+  font-family: "BebasRegular", sans-serif;
+  text-transform: uppercase;
+  font-style: none;
+  text-decoration: none;
+  font-size: 21px;
+  font-weight: 400;
+  color: #e96319;
+  word-spacing: 0.13em;
+  margin-bottom: 10px;
+}
+/* line 1533, ../sass/styles.scss */
+.page-contact #block-boxes-get-in-touch h3 {
+  font-family: "BebasRegular", sans-serif;
+  text-transform: uppercase;
+  font-style: none;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 400;
+  color: #31cbc5;
+  word-spacing: 0.13em;
+  margin-bottom: 10px;
+}
+/* line 1538, ../sass/styles.scss */
+.page-contact #block-boxes-get-in-touch a {
+  font-family: "Ubuntu", sans-serif;
+  text-transform: none;
+  font-style: normal;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 400;
+  color: #e96319 !important;
+}
+/* line 1542, ../sass/styles.scss */
+.page-contact #block-boxes-get-in-touch iframe {
+  border: 4px solid #fff;
+  -webkit-box-shadow: 0px 1px 3px 1px #cccccc;
+  -moz-box-shadow: 0px 1px 3px 1px #cccccc;
+  box-shadow: 0px 1px 3px 1px #cccccc;
+}
+/* line 1549, ../sass/styles.scss */
+.page-contact .form-actions input {
+  background: #31cbc5;
+  border: 2px solid #31cbc5;
+  padding: 7px 10px;
+  -webkit-box-shadow: inset 0px 0px 0px 1px white;
+  -moz-box-shadow: inset 0px 0px 0px 1px white;
+  box-shadow: inset 0px 0px 0px 1px white;
+  font-family: "BebasRegular", sans-serif;
+  text-transform: uppercase;
+  font-style: none;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 400;
+  color: white;
+  word-spacing: 0.13em;
+}
+/* line 1555, ../sass/styles.scss */
+.page-contact .form-actions input:hover {
+  background: #e96319;
+  border: 2px solid #e96319;
+  cursor: pointer;
+}
+
+/* line 1565, ../sass/styles.scss */
+.maintenance-page {
+  font-family: "Ubuntu", sans-serif;
+  text-transform: none;
+  font-style: normal;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 400;
+  color: #161616;
+}
+/* line 1566, ../sass/styles.scss */
+.maintenance-page .messages {
+  margin-bottom: 20px!important;
+  width: 85%;
+}
+/* line 1571, ../sass/styles.scss */
+.maintenance-page .p-link a {
+  font-family: "Ubuntu", sans-serif;
+  text-transform: none;
+  font-style: normal;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 400;
+  color: #161616;
+  text-decoration: underline;
+}
+/* line 1577, ../sass/styles.scss */
+.maintenance-page .before-new-letter {
+  font-family: "BebasRegular", sans-serif;
+  text-transform: uppercase;
+  font-style: none;
+  text-decoration: none;
+  font-size: 21px;
+  font-weight: 400;
+  color: inherit;
+  word-spacing: 0.13em;
+  color: #e96319;
+  margin-top: 20px;
+}
+/* line 1583, ../sass/styles.scss */
+.maintenance-page .fieldset-legend {
+  font-family: "BebasRegular", sans-serif;
+  text-transform: uppercase;
+  font-style: none;
+  text-decoration: none;
+  font-size: 21px;
+  font-weight: 400;
+  color: inherit;
+  word-spacing: 0.13em;
+  padding-bottom: 30px;
+  color: #e96319;
+  display: block;
+}
+/* line 1589, ../sass/styles.scss */
+.maintenance-page .fieldset-wrapper {
+  padding-left: 15px;
+}
+/* line 1593, ../sass/styles.scss */
+.maintenance-page .progress {
+  margin-top: 50px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+/* line 1598, ../sass/styles.scss */
+.maintenance-page .form-required {
+  color: #e96319;
+}
+/* line 1603, ../sass/styles.scss */
+.maintenance-page .page-outer {
+  width: 930px;
+  margin: 0px auto;
+  padding: 15px;
+}
+/* line 1609, ../sass/styles.scss */
+.maintenance-page #title-wrapper {
+  position: relative;
+  padding-top: 20px;
+  margin-bottom: 26px;
+}
+/* line 1615, ../sass/styles.scss */
+.maintenance-page .page-title {
+  display: block;
+  background: url("../images/install-banner.png");
+  height: 50px;
+  text-align: center;
+  font-family: "BebasRegular", sans-serif;
+  text-transform: uppercase;
+  font-style: none;
+  text-decoration: none;
+  font-size: 21px;
+  font-weight: 400;
+  color: inherit;
+  word-spacing: 0.13em;
+  color: white;
+  position: absolute;
+  top: -20px;
+  left: -15px;
+  width: 660px;
+  padding-top: 17px;
+}
+/* line 1628, ../sass/styles.scss */
+.maintenance-page #branding {
+  margin-top: 50px;
+  margin-bottom: 25px;
+  height: 90px;
+  width: 250px;
+  float: left;
+  text-align: center;
+  margin-left: 15px;
+}
+/* line 1638, ../sass/styles.scss */
+.maintenance-page .page-wrapper #sidebar-first {
+  float: left;
+  width: 250px;
+  padding-left: 25px;
+  padding-right: 25px;
+  background: url("../images/install-sidebar.png");
+  height: 367px;
+  font-family: "BebasRegular", sans-serif;
+  text-transform: uppercase;
+  font-style: none;
+  text-decoration: none;
+  font-size: 21px;
+  font-weight: 400;
+  color: inherit;
+  word-spacing: 0.13em;
+  color: white;
+}
+/* line 1647, ../sass/styles.scss */
+.maintenance-page .page-wrapper #sidebar-first li {
+  padding-left: 20px;
+  margin-top: 10px;
+  margin-bottom: 25px;
+  color: #f8b991;
+}
+/* line 1653, ../sass/styles.scss */
+.maintenance-page .page-wrapper #sidebar-first li.active {
+  color: #fff6a9;
+  font-weight: 400!important;
+}
+/* line 1657, ../sass/styles.scss */
+.maintenance-page .page-wrapper #sidebar-first li.done {
+  background: url("../images/check.png") no-repeat left center;
+  color: white;
+}
+/* line 1662, ../sass/styles.scss */
+.maintenance-page .page-wrapper #content {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  min-height: 600px;
+  margin-top: 20px;
+  width: 630px;
+  background: white;
+  float: right;
+  position: relative;
+  padding-top: 45px;
+}
+/* line 1672, ../sass/styles.scss */
+.maintenance-page .page-wrapper #content form {
+  padding-bottom: 80px;
+  margin-top: 60px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+/* line 1674, ../sass/styles.scss */
+.maintenance-page .page-wrapper #content form input {
+  border: 1px solid #e96319;
+  padding: 3px;
+  margin-left: 25px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+/* line 1681, ../sass/styles.scss */
+.maintenance-page .page-wrapper #content form select {
+  border: 1px solid #e96319;
+  padding: 3px;
+  margin-left: 25px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+/* line 1688, ../sass/styles.scss */
+.maintenance-page .page-wrapper #content form .form-radios {
+  margin-left: 10px;
+}
+/* line 1691, ../sass/styles.scss */
+.maintenance-page .page-wrapper #content form .description {
+  color: #9d9d9d;
+  margin-left: 25px;
+}
+/* line 1694, ../sass/styles.scss */
+.maintenance-page .page-wrapper #content form .description a {
+  font-family: "Ubuntu", sans-serif;
+  text-transform: none;
+  font-style: normal;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 400;
+  color: #161616;
+  text-decoration: underline;
+}
+/* line 1700, ../sass/styles.scss */
+.maintenance-page .page-wrapper #content form label {
+  font-family: "BebasRegular", sans-serif;
+  text-transform: uppercase;
+  font-style: none;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 400;
+  color: inherit;
+  word-spacing: 0.13em;
+  color: #31cbc5;
+}
+/* line 1704, ../sass/styles.scss */
+.maintenance-page .page-wrapper #content form label.option {
+  font-family: "Ubuntu", sans-serif;
+  text-transform: none;
+  font-style: normal;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 400;
+  color: #161616;
+  color: black;
+}
+/* line 1710, ../sass/styles.scss */
+.maintenance-page .page-wrapper #content form a {
+  font-family: "BebasRegular", sans-serif;
+  text-transform: uppercase;
+  font-style: none;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 400;
+  color: inherit;
+  word-spacing: 0.13em;
+  color: #e96319;
+}
+/* line 1717, ../sass/styles.scss */
+.maintenance-page .page-wrapper #content form #edit-actions {
+  border-top: 1px solid #BBB;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  height: 80px;
+  background: #DDD;
+  width: 100%;
+  margin: 0px;
+}
+/* line 1726, ../sass/styles.scss */
+.maintenance-page .page-wrapper #content form #edit-actions input {
+  margin-top: 20px;
+  margin-left: 415px;
+  background: url(../images/save-continue.png) #e96319 4px 2px no-repeat;
+  border: 2px solid #e96319;
+  -webkit-box-shadow: inset 0px 0px 0px 1px white;
+  -moz-box-shadow: inset 0px 0px 0px 1px white;
+  box-shadow: inset 0px 0px 0px 1px white;
+  padding: 7px 10px 7px 32px;
+  font-family: "BebasRegular", sans-serif;
+  text-transform: uppercase;
+  font-style: none;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 400;
+  color: white;
+  word-spacing: 0.13em;
+  -webkit-transition: background-position 0.5s;
+  -moz-transition: background-position 0.5s;
+  -o-transition: background-position 0.5s;
+  transition: background-position 0.5s;
+}
+/* line 1736, ../sass/styles.scss */
+.maintenance-page .page-wrapper #content form #edit-actions input:hover {
+  background-position: 4px -44px;
+  cursor: pointer;
+}
+/* line 1745, ../sass/styles.scss */
+.maintenance-page .hover-logo {
+  text-align: right;
+  margin-top: 20px;
+  background: url("../images/white-logo.png") no-repeat;
+  height: 85px;
+  width: 165px;
+  display: block;
+  text-indent: -999;
+  float: right;
+  margin-right: 33px;
+}
+/* line 1755, ../sass/styles.scss */
+.maintenance-page .hover-logo:hover {
+  background-position: -3px -88px;
+}
+/* line 1762, ../sass/styles.scss */
+.maintenance-page .page-wrapper #content form .welcome-header {
+  font-family: "BebasRegular", sans-serif;
+  text-transform: uppercase;
+  font-style: none;
+  text-decoration: none;
+  font-size: 21px;
+  font-weight: 400;
+  color: inherit;
+  word-spacing: 0.13em;
+  color: #e96319 !important;
+}
+/* line 1766, ../sass/styles.scss */
+.maintenance-page .page-wrapper #content form .description, .maintenance-page .page-wrapper #content form p {
+  color: #9d9d9d;
+  margin-left: 25px;
+}
+/* line 1769, ../sass/styles.scss */
+.maintenance-page .page-wrapper #content form .description a, .maintenance-page .page-wrapper #content form p a {
+  font-family: "Ubuntu", sans-serif;
+  text-transform: none;
+  font-style: normal;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 400;
+  color: #161616;
+  text-decoration: underline;
+}
+
+/* line 1781, ../sass/styles.scss */
+.payment-processor #content p, .payment-processor #content li, .drupal-installation-complete #content p, .drupal-installation-complete #content li, .choose-language #content p, .choose-language #content li {
+  margin: 25px;
+}
+
+/* line 1790, ../sass/styles.scss */
+.payment-processor #content .athorize-logo, .payment-processor #content p, .payment-processor #content li {
+  margin-left: 25px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+/* line 1795, ../sass/styles.scss */
+.payment-processor #content .disclamer {
+  font-size: 10px;
+  margin-top: 0px;
+  margin-left: 35px;
+}
+/* line 1800, ../sass/styles.scss */
+.payment-processor #content h2 {
+  font-family: "BebasRegular", sans-serif;
+  text-transform: uppercase;
+  font-style: none;
+  text-decoration: none;
+  font-size: 21px;
+  font-weight: 400;
+  color: inherit;
+  word-spacing: 0.13em;
+  color: #e96319;
+}
+/* line 1804, ../sass/styles.scss */
+.payment-processor #content .logo-link {
+  color: #e96319 !important;
+}
+
+/* line 1810, ../sass/styles.scss */
+.configure-site .fieldset-wrapper {
+  margin-bottom: 40px;
+}
+
+/* line 1818, ../sass/styles.scss */
+.database-configuration fieldset.collapsible .fieldset-legend {
+  padding-bottom: 4px!important;
+}
+
+/* line 1824, ../sass/styles.scss */
+.drupal-installation-complete a {
+  color: #e96319;
+}
+
+/* line 1830, ../sass/styles.scss */
+.commerce-line-item-views-form .views-table {
+  width: 100%;
+}

@@ -1,0 +1,4 @@
+name = Canvas Extras
+description = Provides axtra functions for the Canvas Boutique.
+core = 7.x
+package = Canvas Boutique

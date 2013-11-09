@@ -1,0 +1,23 @@
+<?php
+/**
+ * @file
+ * Provides product/stock import additional functionality for ETME.
+ */
+
+/**
+ * Implements hook_feeds_plugins().
+ */
+function commerce_feedsmulti_feeds_plugins() {
+  return array(
+    'FeedsCommerceProductMultiProcessor' => array(
+      'name' => 'Commerce Product multitype processor',
+      'description' => 'Create and update various types of commerce products from parsed content.',
+      'handler' => array(
+        'parent' => 'FeedsCommerceProductProcessor',
+        'class' => 'FeedsCommerceProductMultiProcessor',
+        'file' => 'FeedsCommerceProductMultiProcessor.inc',
+        'path' => drupal_get_path('module', 'commerce_feedsmulti') . '/plugins',
+      ),
+    ),
+  );
+}

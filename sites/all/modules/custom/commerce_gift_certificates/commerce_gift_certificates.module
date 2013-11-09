@@ -1,0 +1,83 @@
+<?php
+/**
+ * @file
+ * Code for the Commerce Gift Certificates feature.
+ */
+
+include_once 'commerce_gift_certificates.features.inc';
+
+/*
+ * Implements hook_commerce_checkout_complete
+ */
+ 
+function commerce_gift_certificates_commerce_checkout_complete($order) {
+  $order_wrapper = entity_metadata_wrapper('commerce_order', $order);
+	foreach ($order_wrapper->commerce_line_items->value() as $line_item) {
+	  $line_item_wrapper = entity_metadata_wrapper('commerce_line_item', $line_item);
+	  if ($line_item->type == 'gift_certificate'){
+		  $coupon = commerce_coupon_create('gift_certificate');
+		  $amount = $line_item_wrapper->commerce_unit_price->amount->value();
+		  $currency_code = $line_item_wrapper->commerce_unit_price->currency_code->value();
+		  $coupon->commerce_coupon_fixed_amount = array(
+		    'und' => array(
+		      0 => array(
+		        'amount' => $amount,
+		        'currency_code' => $currency_code,
+		        'data' => array(
+		          'components' => array(),
+		        ),
+		      ),
+		    ),
+		  );
+		  commerce_coupon_save($coupon);
+			global $user;
+			//Get the recipient email
+		  if (sizeof($line_item->field_recipient_email) > 0){
+		    $email = $line_item_wrapper->field_recipient_email->value();
+		  } else{
+			  $email = $user->mail;
+		  }
+		  //Set the language
+		  global $language;
+		  $language_name = $language->name;
+		  //Get the recipient's name
+		  if (sizeof($line_item->field_recipient_name) > 0){
+			  $name = $line_item_wrapper->field_recipient_name->value();
+		  } else{
+			  $name = '';
+		  }
+		  //Get the gift certificate email message
+		  if (sizeof($line_item->field_message) > 0){
+			  $message = $line_item_wrapper->field_message->value();
+		  } else{
+			  $message = '';
+		  }
+		  //Get the generated coupon code
+		  $coupon_wrapper = entity_metadata_wrapper('commerce_coupon', $coupon);
+		  $code = $coupon_wrapper->commerce_coupon_code->value();
+		  $cert_amount = commerce_currency_format($amount, $currency_code);
+		  $params = array(
+		    'name' => $name,
+		    'message' => $message,
+		    'from' => $user->name,
+		    'site_name' => variable_get('site_name'),
+		    'coupon_code' => $code,
+		    'certificate_amount' => $cert_amount
+		  );
+		  //TODO, make this a non-hardcoded email
+		  drupal_mail('commerce_gift_certificates', 'gift_notification', $email, $language_name, $params);
+	  }
+	}
+}
+
+/*
+ * Implements hook_mail
+ * Enventually need to make this not be hardcoded into the module
+ */
+
+function commerce_gift_certificates_mail($key, &$message, $params) {  
+	$message['subject'] = $params['from'] . ' bought you a gift certificate for ' . $params['site_name'] . ' for ' . $params['certificate_amount'];
+	$message['body'][] = 'Hi ' . $params['name'] . '!';
+	$message['body'][] = $params['message'];
+	$message['body'][] = 'Enter this code during checkout to apply the gift certificate: ' . $params['coupon_code'] . '.' . 'Your Gift Certificate is for ' . $params['certificate_amount'];
+}
