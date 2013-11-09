@@ -1,0 +1,11 @@
+name = Toolbar Megamenu
+description = "Extension of Toolbar to support dropdown megamenus."
+core = 7.x
+dependencies[] = toolbar
+
+; Information added by drupal.org packaging script on 2013-10-01
+version = "7.x-2.9+9-dev"
+core = "7.x"
+project = "commerce_kickstart"
+datestamp = "1380645699"
+

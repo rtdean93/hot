@@ -1,0 +1,8 @@
+body.toolbar #toolbar-home a span {
+background: black;
+display: block;
+min-height: 40px;
+text-indent: -9999px;
+width: 130px;
+margin: 0;
+}

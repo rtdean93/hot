@@ -1,0 +1,12 @@
+name = Commerce Kickstart Help
+description = Provides in-distribution help for Commerce Kickstart.
+core = 7.x
+package = Commerce Kickstart
+dependencies[] = advanced_help
+
+; Information added by drupal.org packaging script on 2013-10-01
+version = "7.x-2.9+9-dev"
+core = "7.x"
+project = "commerce_kickstart"
+datestamp = "1380645699"
+
