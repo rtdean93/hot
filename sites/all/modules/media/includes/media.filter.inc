@@ -273,7 +273,7 @@ function media_token_to_markup($match, $wysiwyg = FALSE) {
 
     // Ensure a valid view mode is being requested.
     if (!isset($tag_info['view_mode'])) {
-      $tag_info['view_mode'] = media_variable_get('wysiwyg_default_view_mode');
+      $tag_info['view_mode'] = variable_get('media__wysiwyg_default_view_mode', 'full');
     }
     elseif ($tag_info['view_mode'] != 'default') {
       $file_entity_info = entity_get_info('file');
@@ -313,12 +313,11 @@ function media_token_to_markup($match, $wysiwyg = FALSE) {
     $fields = media_filter_field_parser($tag_info);
 
     $attributes = is_array($tag_info['attributes']) ? $tag_info['attributes'] : array();
-    $attribute_whitelist = media_variable_get('wysiwyg_allowed_attributes');
+    $attribute_whitelist = variable_get('media__wysiwyg_allowed_attributes', _media_wysiwyg_allowed_attributes_default());
     $settings['attributes'] = array_intersect_key($attributes, array_flip($attribute_whitelist));
     $settings['fields'] = $fields;
 
     if (!empty($tag_info['attributes']) && is_array($tag_info['attributes'])) {
-      $attribute_whitelist = media_variable_get('wysiwyg_allowed_attributes');
       $settings['attributes'] = array_intersect_key($tag_info['attributes'], array_flip($attribute_whitelist));
       $settings['fields'] = $fields;
 
@@ -583,7 +582,7 @@ function media_format_form($form, $form_state, $file) {
   }
 
   // Allow for overrides to the display format.
-  $default_view_mode = is_array($query_fields) && isset($query_fields['format']) ? $query_fields['format'] : media_variable_get('wysiwyg_default_view_mode');
+  $default_view_mode = is_array($query_fields) && isset($query_fields['format']) ? $query_fields['format'] : variable_get('media__wysiwyg_default_view_mode', 'full');
   if (!isset($formats[$default_view_mode])) {
     $default_view_mode = key($formats);
   }
@@ -623,7 +622,7 @@ function media_format_form($form, $form_state, $file) {
     '#default_value' => $default_view_mode,
     '#description' => t('Choose the type of display you would like for this
       file. Please be aware that files may display differently than they do when
-      they are insterted into an editor.')
+      they are inserted into an editor.')
   );
 
   // Add fields from the file, so that we can override them if neccesary.
@@ -668,18 +667,44 @@ function media_get_file_without_label($file, $view_mode, $settings = array()) {
   // support simple formatters that don't do this, set the element attributes to
   // what was requested, but not if the formatter applied its own logic for
   // element attributes.
-  if (!isset($element['#attributes']) && isset($settings['attributes'])) {
-    $element['#attributes'] = $settings['attributes'];
+  if (isset($settings['attributes'])) {
+    if (empty($element['#attributes'])) {
+      $element['#attributes'] = $settings['attributes'];
+    }
 
     // While this function may be called for any file type, images are a common
-    // use-case. theme_image() and theme_image_style() require the 'alt'
-    // attribute to be passed separately from the 'attributes' array (see
-    // http://drupal.org/node/999338). Until that's fixed, implement this
-    // special-case logic. Image formatters using other theme functions are
-    // responsible for their own 'alt' attribute handling. See
-    // theme_media_formatter_large_icon() for an example.
-    if (isset($settings['attributes']['alt']) && !isset($element['#alt']) && isset($element['#theme']) && in_array($element['#theme'], array('image', 'image_style'))) {
-      $element['#alt'] = $settings['attributes']['alt'];
+    // use-case, and image theme functions have their own structure for render
+    // arrays.
+    if (isset($element['#theme'])) {
+      // theme_image() and theme_image_style() require the 'alt' attributes to
+      // be passed separately from the 'attributes' array. (see
+      // http://drupal.org/node/999338). Until that's fixed, implement this
+      // special-case logic. Image formatters using other theme functions are
+      // responsible for their own 'alt' attribute handling. See
+      // theme_media_formatter_large_icon() for an example.
+      if (in_array($element['#theme'], array('image', 'image_style'))) {
+        if (empty($element['#alt']) && isset($settings['attributes']['alt'])) {
+          $element['#alt'] = $settings['attributes']['alt'];
+        }
+      }
+      // theme_image_formatter() and any potential replacements, such as
+      // theme_colorbox_image_formatter(), also require attribute handling.
+      elseif (strpos($element['#theme'], 'image_formatter') !== FALSE) {
+        // theme_image_formatter() requires the attributes to be
+        // set on the item rather than the element itself.
+        if (empty($element['#item']['attributes'])) {
+          $element['#item']['attributes'] = $settings['attributes'];
+        }
+
+        // theme_image_formatter() also requires alt, title, height, and
+        // width attributes to be set on the item rather than within its
+        // attributes array.
+        foreach (array('alt', 'title', 'width', 'height') as $attr) {
+          if (isset($settings['attributes'][$attr])) {
+            $element['#item'][$attr] = $settings['attributes'][$attr];
+          }
+        }
+      }
     }
   }
 
