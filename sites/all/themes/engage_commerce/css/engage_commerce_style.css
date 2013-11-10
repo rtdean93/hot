@@ -9,3 +9,41 @@ text-indent: -9999px;
 width: 130px;
 margin: 0;
 }
+
+body {
+        background-color: #FFFFFF;
+        background-image: url(../images/background.png);
+        background-repeat: repeat-x;
+        background-position: center top;
+        background-attachment: fixed;
+        margin: 0px;
+        padding: 0px;
+        }
+
+.site-name-slogan h1 a, .site-name-slogan h1 a:visited, .site-name-slogan h1 a:link, .site-name-slogan h2 a   {
+    color: black;
+    font-variant: small-caps;
+    font-family: Book Antiqua;
+}
+
+.zone-content {
+    border: 1px solid #E0E3E6;
+    background: lightgray;
+}
+
+.front .node {
+    border: 0px solid #E0E3E6;
+}
+
+a .button, a:link .button, a:visited .button {
+    background: blue;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    font-family: helvetica;
+    font-size: large;
+}
+
+.block-menu-menu-social-connection li {
+    list-style: none;
+}
