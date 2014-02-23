@@ -77,5 +77,11 @@ div#block-block-2 {
   text-align: center;
 }
 
+.newspaper
+{
+  -moz-column-count:2; /* Firefox */
+  -webkit-column-count:2; /* Safari and Chrome */
+  column-count:2;
+}
 
 
