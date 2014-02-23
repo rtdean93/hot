@@ -31,6 +31,10 @@ body {
     background: lightgray;
 }
 
+.zone-preface {
+    background: lightgray;
+}
+
 .front .node {
     border: 0px solid #E0E3E6;
 }
@@ -47,3 +51,19 @@ a .button, a:link .button, a:visited .button {
 .block-menu-menu-social-connection li {
     list-style: none;
 }
+
+.front .image-blog_full {
+  height: 380px;
+  opacity: 0.9;
+  /* width: 870px; */
+  border: 10px solid white;
+  margin: 0 0 20px 0;
+  width: 97%;
+}
+
+p span {
+  font-weight: bolder;
+  padding: 5px;
+
+}
+

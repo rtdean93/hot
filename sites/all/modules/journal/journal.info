@@ -1,0 +1,12 @@
+name = Journal
+description = Maintain a custom log of performed setup and configuration actions.
+package = Development
+core = 7.x
+files[] = tests/journal.test
+
+; Information added by drupal.org packaging script on 2013-09-30
+version = "7.x-1.0+3-dev"
+core = "7.x"
+project = "journal"
+datestamp = "1380583884"
+
