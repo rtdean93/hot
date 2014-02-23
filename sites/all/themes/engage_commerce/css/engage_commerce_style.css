@@ -70,6 +70,12 @@ a .button, a:link .button, a:visited .button {
 p span {
   font-weight: bolder;
   padding: 5px;
-
 }
+
+div#block-block-2 {
+  margin: auto;
+  text-align: center;
+}
+
+
 
