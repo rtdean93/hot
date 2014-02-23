@@ -52,13 +52,19 @@ a .button, a:link .button, a:visited .button {
     list-style: none;
 }
 
-.front .image-blog_full {
+.front img.image-blog_full, #node-page-17 img.image-blog_full {
   height: 380px;
   opacity: 0.9;
   /* width: 870px; */
   border: 10px solid white;
   margin: 0 0 20px 0;
   width: 97%;
+}
+
+#node-page-17 img.image-product_full {
+  border: 10px solid white;
+  float:right;
+  margin-left: 20px;
 }
 
 p span {
